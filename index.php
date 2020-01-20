@@ -10,7 +10,7 @@ $a = 5;
 
 
 // Четвертое
-$h1 = 'Hello';
+$h1 = 'Hello world';
 $title = 'Hello world';
 
 /* Пятое
