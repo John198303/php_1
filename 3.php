@@ -65,7 +65,7 @@ for ($i = 0; $i <= 10; $i++){
 echo '</table>';
 
 
-// Четвертое
+// Третье
 
 $region = [
 	'Московская область' => ['Москва', 'Зеленоград', 'Клин'],
@@ -75,10 +75,8 @@ $region = [
 ];
 
 foreach ($region as $key => $item){
-	if (is_array($item)){
-		
-	echo $key . ': <br>';
-		
+	if (is_array($item)){		
+	echo $key . ': <br>';		
 	foreach ($item as $it){
 		echo $it . ' ,' ;
 	}
@@ -87,6 +85,44 @@ foreach ($region as $key => $item){
     }
 	echo '<br>';
 }
+
+// Четвертое
+
+function change($word){
+	
+
+	$word = strtr( $word, [ 'а' => 'a', 'б' => 'b', 'в' => 'v', 'г' => 'g',
+			 'д' => 'd', 'е' => 'e', 'ж' => 'j', 'з' => 'z', 
+			 'и' => 'i', 'к' => 'k', 'л' => 'l', 'м' => 'm', 
+			 'н' => 'n', 'о' => 'o', 'п' => 'p', 'р' => 'r',
+			 'с' => 'c', 'т' => 't', 'у' => 'y', 'ф' => 'f',
+			 'х' => 'h', 'ц' => 'ce', 'ш' => 'ha', 'щ' => 'cha',
+			 'э' => 'ue', 'ю' => 'yu', 'я' => 'ya']);
+
+
+	return $word;
+}
+
+echo change('ваза');
+
+// Пятое 
+
+function change($word){
+	
+
+	$word = strtr( $word, [' ' => '_']);
+
+
+	return $word;
+}
+
+echo change('в а з а');
+
+// Шестое
+
+
+
+
 
 
 
